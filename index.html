@@ -23,7 +23,7 @@
   <meta property="og:title" content="Drywall em São Paulo com preço justo | Vittor Drywall" />
   <meta property="og:description" content="Instalação de drywall com rapidez e qualidade em São Paulo. Solicite seu orçamento agora." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="./img/drywall.jpeg" />
+  <meta property="og:image" content="./img/logo.png" />
 
   <!-- TWITTER (bônus) -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -33,7 +33,7 @@
 
   <!-- BOOTSTRAP -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <!-- PRELOAD (PERFORMANCE) -->
   <link rel="preload" as="image" href="./img/drywall.jpeg">
 
@@ -83,7 +83,10 @@
       border: none;
       border-radius: 12px;
     }
-
+img {
+  height: 250px;
+  object-fit: cover;
+}
     .section-title {
       font-weight: bold;
     }
@@ -102,7 +105,9 @@
       .hero h1 {
         font-size: 2.5rem;
       }
-
+.btn i {
+  margin-right: 6px;
+}
       .hero p {
         font-size: 1.1rem;
       }
@@ -115,6 +120,10 @@
 <!-- HERO -->
 <header class="hero">
   <div class="container">
+   <img src="./img/logo.png" 
+     alt="Vittor Drywall" 
+     class="mb-3 img-fluid"
+     style="max-width: 180px;">
     <h1 class="fw-bold mb-3">
       Drywall em São Paulo com rapidez e qualidade
     </h1>
@@ -129,32 +138,89 @@
       ✔ Orçamento rápido no WhatsApp
     </p>
 
-    <a href="https://wa.me/5511984311797" class="btn btn-success btn-lg px-4">
-      Pedir orçamento no WhatsApp
-    </a>
+    <a href="https://wa.me/5511984311797"
+   onclick="fbq('track', 'Lead');"
+   class="btn btn-success btn-lg px-4"> <i class="bi bi-whatsapp"></i> Solicitar orçamento </a>
   </div>
 </header>
 
 <!-- PROJETOS -->
 <section class="bg-light py-5">
   <div class="container text-center">
-    <h2 class="section-title mb-4">Projetos Recentes</h2>
+    <h2 class="section-title mb-5">Antes e Depois</h2>
 
-    <div class="row g-4 before-after">
+    <div class="row g-4">
 
-      <div class="col-12 col-md-4">
-        <img src="./img/antes1.jpg">
-        <p class="mt-2">Antes</p>
+      <!-- ANTES -->
+      <div class="col-12 col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="mb-3">Antes</h5>
+
+            <div id="carouselAntes" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                  <img src="./img/antesDrywall.jpeg" class="d-block w-100 rounded">
+                </div>
+
+                <div class="carousel-item">
+                  <img src="./img/antesDrywall2.jpeg" class="d-block w-100 rounded">
+                </div>
+
+                <div class="carousel-item">
+                  <img src="./img/antesDrywall3.jpeg" class="d-block w-100 rounded">
+                </div>
+
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselAntes" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselAntes" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+          </div>
+        </div>
       </div>
 
-      <div class="col-12 col-md-4">
-        <img src="./img/depois1.jpg">
-        <p class="mt-2">Depois</p>
-      </div>
+      <!-- DEPOIS -->
+      <div class="col-12 col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="mb-3">Depois</h5>
 
-      <div class="col-12 col-md-4">
-        <img src="./img/depois2.jpg">
-        <p class="mt-2">Resultado</p>
+            <div id="carouselDepois" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                  <img src="./img/drywall.jpg" class="d-block w-100 rounded">
+                </div>
+
+                <div class="carousel-item">
+                  <img src="./img/drywall2.jpg" class="d-block w-100 rounded">
+                </div>
+
+                <div class="carousel-item">
+                  <img src="./img/drywall3.jpg" class="d-block w-100 rounded">
+                </div>
+
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselDepois" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselDepois" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+          </div>
+        </div>
       </div>
 
     </div>
@@ -177,12 +243,14 @@
 <section class="bg-light py-5 text-center">
   <div class="container">
     <h3>Quanto custa?</h3>
-    <p>💰 Valores a partir de R$80/m²</p>
+    <p>💰Valores a partir de R$120/m²</p>
     <p>📲 Orçamento gratuito e sem compromisso</p>
 
-    <a href="https://wa.me/5511984311797" class="btn btn-success btn-lg px-4">
-      Solicitar orçamento
-    </a>
+    <a href="https://wa.me/5511984311797"
+   onclick="fbq('track', 'Lead');"
+   class="btn btn-success btn-lg px-4">
+    <i class="bi bi-whatsapp"></i> Solicitar orçamento
+</a>
   </div>
 </section>
 
@@ -241,9 +309,13 @@
     <h3>Precisa de drywall?</h3>
     <p>⚡ Agenda da semana quase cheia</p>
 
-    <a href="https://wa.me/5511984311797" class="btn btn-success btn-lg px-4">
-      Falar no WhatsApp
-    </a>
+    <a href="https://wa.me/5511984311797"
+     target="_blank"
+   rel="noopener noreferrer"
+   onclick="fbq('track', 'Contact');"
+   class="btn btn-success btn-lg px-4">
+    <i class="bi bi-whatsapp"></i> Falar no WhatsApp
+</a>
   </div>
 </section>
 
@@ -257,7 +329,7 @@
       <div class="col-12 col-md-6">
         <div class="p-4 border rounded h-100">
           <h5>Quanto custa?</h5>
-          <p>Depende do projeto, mas começa a partir de R$80/m².</p>
+          <p>💰 Valores a partir de R$120/m².</p>
         </div>
       </div>
 
@@ -286,59 +358,109 @@
   </div>
 </section>
 
-<!-- CONTATO -->
 <section class="py-5">
-  <div class="container text-center">
-    <h2 class="mb-3">Entre em Contato</h2>
+  <div class="container">
+    
+    <div class="row g-4 align-items-center">
 
-    <form action="https://formspree.io/f/mbdzvozj" method="POST" class="mx-auto" style="max-width: 500px">
+      <!-- FORMULÁRIO -->
+      <div class="col-12 col-md-6 text-center">
+        <h2 class="mb-3">Entre em Contato</h2>
 
-      <div class="mb-3 text-start">
-        <label>Nome</label>
-        <input type="text" name="name" class="form-control">
+        <form action="https://formspree.io/f/mbdzvozj" method="POST" class="mx-auto" style="max-width: 500px">
+
+          <div class="mb-3 text-start">
+            <label>Nome</label>
+            <input type="text" name="name" class="form-control">
+          </div>
+
+          <div class="mb-3 text-start">
+            <label>Telefone</label>
+            <input type="text" name="phone" class="form-control">
+          </div>
+
+          <div class="mb-3 text-start">
+            <label>Email</label>
+            <input type="email" name="email" class="form-control" required>
+          </div>
+
+          <div class="mb-3 text-start">
+            <label>Mensagem</label>
+            <textarea name="message" class="form-control" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">
+            Enviar mensagem
+          </button>
+
+        </form>
       </div>
 
-      <div class="mb-3 text-start">
-        <label>Telefone</label>
-        <input type="text" name="phone" class="form-control">
+      <!-- MAPA -->
+      <div class="col-12 col-md-6 text-center">
+        <h3 class="mb-3">Atendemos na Zona Sul de São Paulo</h3>
+
+        <p class="mb-4">
+          📍 Atendimento rápido na Zona Sul <br>
+          ⚡ Chegamos rápido no seu endereço
+        </p>
+
+        <div class="ratio ratio-16x9">
+          <iframe 
+            src="https://www.google.com/maps?q=Zona+Sul+São+Paulo&output=embed"
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <!-- CTA EXTRA -->
+        <a href="https://wa.me/5511984311797"
+           onclick="fbq('track', 'Contact');"
+           class="btn btn-success mt-4">
+           <i class="bi bi-whatsapp"></i> Solicitar orçamento na minha região
+        </a>
+
       </div>
 
-      <div class="mb-3 text-start">
-        <label>Email</label>
-        <input type="email" name="email" class="form-control" required>
-      </div>
+    </div>
 
-      <div class="mb-3 text-start">
-        <label>Mensagem</label>
-        <textarea name="message" class="form-control" required></textarea>
-      </div>
-
-      <button type="submit" class="btn btn-primary w-100">
-        Enviar mensagem
-      </button>
-
-    </form>
   </div>
 </section>
-
 <!-- INSTAGRAM -->
-<section class="text-center py-4">
-  <p>Veja mais trabalhos no Instagram</p>
-  <a href="https://www.instagram.com/vittordrywall/" target="_blank">
-    @vittordrywall
-  </a>
+<section class="text-center py-5 bg-light">
+  <div class="container">
+
+    <h4 class="mb-3">Veja nossos trabalhos reais</h4>
+    
+    <p class="mb-4">
+      Acompanhe projetos recentes, antes e depois e serviços finalizados
+    </p>
+
+    <a href="https://www.instagram.com/vittordrywall/"
+       target="_blank"
+       rel="noopener noreferrer"
+       onclick="fbq('track', 'ViewContent');"
+       class="btn btn-outline-dark btn-lg">
+       <i class="bi bi-instagram"></i> Ver Instagram @vittordrywall
+    </a>
+
+  </div>
 </section>
 
 <!-- BOTÃO FIXO -->
 <a href="https://wa.me/5511984311797"
+ target="_blank"
+   rel="noopener noreferrer"
+   onclick="fbq('track', 'Contact');"
    style="position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; padding: 12px 16px; border-radius: 50px; font-weight: bold; text-decoration: none; z-index: 999;">
-   WhatsApp
+    <i class="bi bi-whatsapp"></i>  WhatsApp
 </a>
 
 <!-- RODAPÉ -->
 <footer class="bg-dark text-white text-center py-3">
   <p>© 2026 Vittor Drywall</p>
 </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
