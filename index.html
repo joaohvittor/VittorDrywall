@@ -30,7 +30,7 @@
 
   <!-- FAVICON -->
   <link rel="icon" href="./img/favicon.png" type="image/png" />
-
+<link rel="stylesheet" href="css/style.css">
   <!-- BOOTSTRAP -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
@@ -41,78 +41,7 @@
  <!-- Meta Pixel Code --> <script> !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '936982695735257'); fbq('track', 'PageView'); </script> <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=936982695735257&ev=PageView&noscript=1" /></noscript> <!-- End Meta Pixel Code -->
 
   <!-- CSS -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-    }
-
-    /* HERO MOBILE FIRST */
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                  url('./img/drywall.jpeg');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 60px 15px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 1.6rem;
-    }
-
-    .hero p {
-      font-size: 0.95rem;
-    }
-
-    /* BOTÃO */
-    .whatsapp-btn {
-      background-color: #25d366;
-      border: none;
-      color: white;
-      font-weight: bold;
-    }
-
-    .whatsapp-btn:hover {
-      background-color: #1ebe5d;
-    }
-
-    /* CARDS */
-    .card {
-      border: none;
-      border-radius: 12px;
-    }
-img {
-  height: 250px;
-  object-fit: cover;
-}
-    .section-title {
-      font-weight: bold;
-    }
-
-    .before-after img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    /* DESKTOP */
-    @media (min-width: 768px) {
-      .hero {
-        padding: 120px 20px;
-      }
-
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-.btn i {
-  margin-right: 6px;
-}
-      .hero p {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
+  
 </head>
 
 <body>
@@ -148,112 +77,103 @@ img {
   <div class="container text-center">
     <h2 class="section-title mb-5">Projetos Realizados</h2>
 
-    <!-- ================= REPARO ================= -->
-    <h4 class="mb-4">Reparo em Drywall</h4>
-
-    <div class="row g-4 mb-5">
-
-      <!-- ANTES -->
-      <div class="col-12 col-md-6">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="mb-3">Antes</h5>
-            <img src="./img/buracoParede/buracoDrywall.jpeg" class="img-fluid rounded">
-          </div>
-        </div>
-      </div>
-
-      <!-- DEPOIS -->
-      <div class="col-12 col-md-6">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="mb-3">Depois</h5>
-            <img src="./img/buracoParede/buracoDrywallTampado.jpeg" class="img-fluid rounded">
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- ================= FORRO ================= -->
-    <h4 class="mb-4">Forro em Drywall</h4>
-
     <div class="row g-4">
 
-      <!-- ANTES (CARROSSEL) -->
+      <!-- CARD 1 -->
       <div class="col-12 col-md-6">
-        <div class="card shadow-sm">
+        <div class="card shadow-sm h-100">
           <div class="card-body">
-            <h5 class="mb-3">Antes</h5>
 
-            <div id="carouselAntesForro" class="carousel slide" data-bs-ride="carousel">
+            <h5 class="mb-3">Reparo em Drywall</h5>
+
+            <!-- CARROSSEL -->
+            <div id="carouselReparo" class="carousel slide mb-3" data-bs-ride="carousel">
               <div class="carousel-inner">
 
                 <div class="carousel-item active">
-                  <img src="./img/antesDrywall.jpeg" class="d-block w-100 rounded">
+                  <img src="./img/buracoParede/buracoDrywall.jpeg" class="d-block w-100">
                 </div>
 
                 <div class="carousel-item">
-                  <img src="./img/antesDrywall2.jpeg" class="d-block w-100 rounded">
-                </div>
-
-                <div class="carousel-item">
-                  <img src="./img/antesDrywall3.jpeg" class="d-block w-100 rounded">
+                  <img src="./img/buracoParede/buracoDrywallTampado.jpeg" class="d-block w-100">
                 </div>
 
               </div>
 
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselAntesForro" data-bs-slide="prev">
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselReparo" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
               </button>
 
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselAntesForro" data-bs-slide="next">
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselReparo" data-bs-slide="next">
                 <span class="carousel-control-next-icon"></span>
               </button>
             </div>
+
+            <!-- DESCRIÇÃO -->
+            <p>
+              Correção de buraco em parede de drywall com acabamento perfeito, sem sujeira e rápido.
+            </p>
+
+            <!-- BOTÃO -->
+            <a href="https://wa.me/5511960610712?text=Olá,%20quero%20um%20reparo%20em%20drywall"
+               class="btn btn-success w-100">
+               Quero algo assim
+            </a>
 
           </div>
         </div>
       </div>
 
-      <!-- DEPOIS (CARROSSEL) -->
+      <!-- CARD 2 -->
       <div class="col-12 col-md-6">
-        <div class="card shadow-sm">
+        <div class="card shadow-sm h-100">
           <div class="card-body">
-            <h5 class="mb-3">Depois</h5>
 
-            <div id="carouselDepoisForro" class="carousel slide" data-bs-ride="carousel">
+            <h5 class="mb-3">Forro em Drywall</h5>
+
+            <!-- CARROSSEL -->
+            <div id="carouselForro" class="carousel slide mb-3" data-bs-ride="carousel">
               <div class="carousel-inner">
 
                 <div class="carousel-item active">
-                  <img src="./img/drywall.jpg" class="d-block w-100 rounded">
+                  <img src="./img/antesDrywall.jpeg" class="d-block w-100">
                 </div>
 
                 <div class="carousel-item">
-                  <img src="./img/drywall2.jpg" class="d-block w-100 rounded">
+                  <img src="./img/drywall.jpg" class="d-block w-100">
                 </div>
 
                 <div class="carousel-item">
-                  <img src="./img/drywall3.jpg" class="d-block w-100 rounded">
+                  <img src="./img/drywall2.jpg" class="d-block w-100">
                 </div>
 
               </div>
 
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselDepoisForro" data-bs-slide="prev">
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselForro" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
               </button>
 
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselDepoisForro" data-bs-slide="next">
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselForro" data-bs-slide="next">
                 <span class="carousel-control-next-icon"></span>
               </button>
             </div>
+
+            <!-- DESCRIÇÃO -->
+            <p>
+              Instalação de forro em drywall com acabamento moderno, ideal para iluminação embutida.
+            </p>
+
+            <!-- BOTÃO -->
+            <a href="https://wa.me/5511960610712?text=Olá,%20quero%20um%20forro%20em%20drywall"
+               class="btn btn-success w-100">
+               Quero algo assim
+            </a>
 
           </div>
         </div>
       </div>
 
     </div>
-
   </div>
 </section>
 
